@@ -1,0 +1,19 @@
+ErrorDocument 403 http://localhost/qcoy/error/403.php
+ErrorDocument 404 http://localhost/qcoy/error/404.php
+
+<IfModule mod_rewrite.c>
+RewriteEngine on
+RewriteRule ^dashboard index.php?halaman=dashboard [NC,L]
+RewriteRule ^data-siswa index.php?halaman=data-siswa [NC,L]
+RewriteRule ^login login.php [NC,L]
+RewriteRule ^verifikasi index.php?halaman=verifikasi-siswa [NC,L]
+RewriteRule ^siswa-diterima index.php?halaman=siswa-diterima [NC,L]
+RewriteRule ^zonasi-form index.php?halaman=zonasi-form [NC,L]
+RewriteRule ^tambah index.php?halaman=tambah-siswa [NC,L]
+RewriteRule ^siswa-ditolak index.php?halaman=siswa-ditolak [NC,L]
+RewriteRule ^logout ../admins/logout.php [NC,L]
+RewriteRule ^terima-siswa ../cmd/terima-siswa.php [NC,L]
+RewriteRule ^acc-siswa=([0-9a-zA-Z_-]+) ../admins/acc-siswa.php?acc=$1 [NC,L]
+RewriteRule ^acc-siswa ../admins/acc-siswa.php?acc=$1 [NC,L]
+RewriteRule ^rombel index.php?halaman=rombel [NC,L]
+</IfModule>
